@@ -98,7 +98,7 @@ Project name? → Type portfolio-website and press Enter
 
 Directory? → Press Enter
 
-Your site will be live at: https://portfolio-website.vercel.app
+Your site will be live at: https://portfolio-card-five.vercel.app/
 
 Redeploy After Changes
 bash
