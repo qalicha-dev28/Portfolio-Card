@@ -658,6 +658,65 @@ p {
 }
 
 /* ============================================
+   PLATFORM-SPECIFIC COLORS
+   ============================================ */
+
+/* Contact Link Platform Colors */
+.contact-link[href*="mailto"]:hover {
+    color: #EA4335 !important; /* Gmail Red */
+}
+
+.contact-link[href*="tel"]:hover {
+    color: #34A853 !important; /* Phone Green */
+}
+
+.contact-link[href*="whatsapp"]:hover {
+    color: #25D366 !important; /* WhatsApp Green */
+}
+
+/* Social Icon Platform Colors */
+.social-icon[href*="github"]:hover {
+    background-color: #333333 !important; /* GitHub Black */
+}
+
+.social-icon[href*="instagram"]:hover {
+    background: linear-gradient(45deg, 
+        #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D) !important;
+}
+
+.social-icon[href*="tiktok"]:hover {
+    background-color: #000000 !important; /* TikTok Black */
+}
+
+.social-icon[href*="whatsapp"]:hover {
+    background-color: #25D366 !important; /* WhatsApp Green */
+}
+
+/* Contact Link Icon Colors */
+.contact-link .fa-whatsapp {
+    color: #25D366;
+}
+
+.contact-link .fa-envelope {
+    color: #EA4335;
+}
+
+.contact-link .fa-phone {
+    color: #34A853;
+}
+
+/* WhatsApp Link Special Styling */
+.contact-link[href*="whatsapp"] {
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.contact-link[href*="whatsapp"]:hover {
+    background: rgba(37, 211, 102, 0.2);
+    border-color: #25D366;
+}
+
+/* ============================================
    ANIMATIONS
    ============================================ */
 @keyframes gradient-shift {
