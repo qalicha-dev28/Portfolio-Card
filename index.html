@@ -7,117 +7,191 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="intro-section">
-            <h2 class="greeting">Hello!</h2>
-            <h1 class="name">Hi! I am Qalicha Najma</h1>
-            <h2 class="title">Full-stack Web Developer</h2>
-
-            <p class="intro-text">
-                Full-stack web developer passionate about building user-friendly web applications. 
-                Experienced across front-end and back-end development. 
-                I am a full-stack web developer specializing in modern responsive web apps 
-                with strong focus on performance and usability.
-            </p>
-
-            <a href="#" class="lets-talk">Let's talk</a>
-        </div>
-
-        <div class="about-section">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <h3 class="title">Full-stack Web Developer</h3>
-                <p class="about-text">
-                    I'm a fullstack web developer with experience in building modern, scalable, 
-                    user-focused web applications. I work across both front-end and back-end development, 
-                    turning ideas into clean, efficient and reliable solutions. I enjoy solving problems, 
-                    writing maintainable code and continuously learning new technologies to improve my craft. 
-                    I'm open to opportunities where I can contribute, grow and build impactful digital products. 
-                    Open to collaborations, internships and junior-to-mid-level full-stack opportunities.
-                </p>
-
-                <a href="#" class="hire-me-btn">Hire Me</a>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">Qalicha Najma</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
             </div>
         </div>
+    </nav>
 
-        <div class="divider"></div>
-
-        <div class="skills-section">
-            <h2 class="section-title">My Skills</h2>
-
-            <div class="skill-item">
-                <div class="skill-header">
-                    <span class="skill-name">HTML</span>
-                    <span class="skill-percentage">90%</span>
+    <main class="main-container">
+        <!-- Hero Section with Image and Content -->
+        <section class="hero-section" id="home">
+            <div class="hero-container">
+                <!-- Left Column: Profile Image -->
+                <div class="image-column">
+                    <div class="image-container">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b786d4d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+                             alt="Qalicha Najma - Full-stack Developer"
+                             class="profile-image">
+                        <div class="image-overlay"></div>
+                    </div>
                 </div>
-                <div class="skill-bar">
-                    <div class="skill-progress html-progress"></div>
+
+                <!-- Right Column: Your Existing Content -->
+                <div class="content-column">
+                    <div class="intro-section">
+                        <h2 class="greeting">Hello!</h2>
+                        <h1 class="name">Hi! I am Qalicha Najma</h1>
+                        <h2 class="title">Full-stack Web Developer</h2>
+
+                        <p class="intro-text">
+                            Full-stack web developer passionate about building user-friendly web applications. 
+                            Experienced across front-end and back-end development. 
+                            I am a full-stack web developer specializing in modern responsive web apps 
+                            with strong focus on performance and usability.
+                        </p>
+
+                        <a href="#contact" class="lets-talk">Let's talk <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rest of Your Content (Moved Below) -->
+        <div class="content-container">
+            <div class="about-section" id="about">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <h3 class="title">Full-stack Web Developer</h3>
+                    <p class="about-text">
+                        I'm a fullstack web developer with experience in building modern, scalable, 
+                        user-focused web applications. I work across both front-end and back-end development, 
+                        turning ideas into clean, efficient and reliable solutions. I enjoy solving problems, 
+                        writing maintainable code and continuously learning new technologies to improve my craft. 
+                        I'm open to opportunities where I can contribute, grow and build impactful digital products. 
+                        Open to collaborations, internships and junior-to-mid-level full-stack opportunities.
+                    </p>
+
+                    <a href="#contact" class="hire-me-btn">Hire Me <i class="fas fa-paper-plane"></i></a>
                 </div>
             </div>
 
-            <div class="skill-item">
-                <div class="skill-header">
-                    <span class="skill-name">CSS</span>
-                    <span class="skill-percentage">85%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress css-progress"></div>
+            <div class="divider"></div>
+
+            <div class="skills-section" id="skills">
+                <h2 class="section-title">My Skills</h2>
+
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">HTML</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress html-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">CSS</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress css-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress js-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">React</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress react-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress python-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Flask</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress flask-progress"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">Figma</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress figma-progress"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="skill-item">
-                <div class="skill-header">
-                    <span class="skill-name">JavaScript</span>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress js-progress"></div>
-                </div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-header">
-                    <span class="skill-name">React</span>
-                    <span class="skill-percentage">80%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress react-progress"></div>
-                </div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-header">
-                    <span class="skill-name">Python</span>
-                    <span class="skill-percentage">75%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress python-progress"></div>
-                </div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-header">
-                    <span class="skill-name">Flask</span>
-                    <span class="skill-percentage">75%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress flask-progress"></div>
-                </div>
-            </div>
-
-            <div class="skill-item">
-                <div class="skill-header">
-                    <span class="skill-name">Figma</span>
-                    <span class="skill-percentage">70%</span>
-                </div>
-                <div class="skill-bar">
-                    <div class="skill-progress figma-progress"></div>
+            <!-- Contact Section -->
+            <div class="contact-section" id="contact">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <p class="contact-text">
+                        Interested in working together or have a project in mind? 
+                        Feel free to reach out!
+                    </p>
+                    <div class="contact-links">
+                        <a href="mailto:qalicha@example.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> borunajma69@gmail.com
+                        </a>
+                        <a href="tel:+1234567890" class="contact-link">
+                            <i class="fas fa-phone"></i> +254 79283077
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Qalicha Najma. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-codepen"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
