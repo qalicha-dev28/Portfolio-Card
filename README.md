@@ -27,7 +27,7 @@ Google Fonts - Inter font family
 Vanilla JavaScript - Minimal interactivity
 
 Project Structure
-bash
+text
 portfolio-website/
 ├── index.html
 ├── styles.css
@@ -43,129 +43,87 @@ Phone: +254 783 0788 (click-to-call)
 WhatsApp: +254 783 0788 (direct messaging)
 
 Social Media
-GitHub: github.com/qalicha28-dev28
+GitHub: https://github.com/qalicha28-dev28
 
-Instagram: instagram.com/qalicha_najma
+Instagram: https://instagram.com/qalicha_najma
 
-TikTok: tiktok.com/@qalicha_najma
+TikTok: https://tiktok.com/@qalicha_najma
 
-Setup Instructions
+Quick Start
 1. Create Project Structure
 bash
-# Create project directory
 mkdir portfolio-website
 cd portfolio-website
-
-# Create HTML file
-touch index.html
-
-# Create CSS file
-touch styles.css
-
-# Create README file
-touch README.md
-
-# Create images directory
+touch index.html styles.css README.md
 mkdir Images
-2. Add Your Profile Image
-bash
-# Place your profile image in the Images folder
-# Ensure it's named Image.jpg
-# Supported formats: JPG, PNG, WebP
+2. Add Profile Image
+Place your image in Images/Image.jpg
+
 3. Copy HTML Code
-bash
-# Open index.html in your preferred editor
-# Copy and paste the HTML code provided
-# Save the file
+Open index.html and paste the provided HTML code
+
 4. Copy CSS Code
-bash
-# Open styles.css in your preferred editor
-# Copy and paste the CSS code provided
-# Save the file
+Open styles.css and paste the provided CSS code
+
 5. Test Locally
 bash
-# Open index.html in your browser
-# Test all links and responsive design
-# Use Chrome DevTools for mobile testing
+# On macOS:
+open index.html
+
+# On Linux:
+xdg-open index.html
+
+# On Windows:
+start index.html
 Deployment to Vercel
-Option 1: Vercel CLI (Recommended)
+Install Vercel CLI
 bash
-# Install Vercel CLI globally
 npm install -g vercel
-
-# Login to Vercel (first time only)
+Login to Vercel
+bash
 vercel login
-
-# Deploy from project directory
+Deploy Your Site
+bash
 cd portfolio-website
 vercel
+Follow the prompts:
 
-# Follow the prompts
-# Choose default options for:
-# - Set up and deploy: Yes
-# - Which scope: Personal
-# - Link to existing project: No
-# - Project name: portfolio-website
-# - Directory: . (current directory)
-Option 2: Drag & Drop on Vercel Website
-Visit vercel.com/new
+Set up and deploy? → Press Enter
 
-Drag and drop your portfolio-website folder
+Which scope? → Press Enter
 
-Vercel will automatically detect and deploy
+Link to existing project? → Type n and press Enter
 
-Your site will be live in seconds
+Project name? → Type portfolio-website and press Enter
 
-Option 3: Connect GitHub Repository
-Push your code to GitHub:
+Directory? → Press Enter
 
+Your site will be live at: https://portfolio-website.vercel.app
+
+Redeploy After Changes
 bash
-# Initialize git repository
-git init
+vercel --prod
+Customization
+Update Contact Info
+Edit these in index.html:
 
-# Add all files
-git add .
+Lines 197-213: Email and phone
 
-# Commit changes
-git commit -m "Initial commit: Portfolio website"
+Lines 229-254: Social media links
 
-# Add remote repository (replace with your GitHub URL)
-git remote add origin https://github.com/yourusername/portfolio-website.git
-
-# Push to GitHub
-git branch -M main
-git push -u origin main
-Connect GitHub to Vercel:
-
-Go to vercel.com/new
-
-Click "Import Git Repository"
-
-Select your portfolio-website repository
-
-Click "Import"
-
-Deploy automatically
-
-Customization Guide
-Update Personal Information
-bash
-# Edit the HTML file to update:
-# 1. Name and job title
-# 2. Skills and percentages
-# 3. About me text
-# 4. Contact information
 Change Colors
-bash
-# Edit styles.css and modify these CSS variables:
+Edit in styles.css (lines 15-25):
+
+css
 :root {
-    --primary: #667eea;    /* Change primary color */
-    --secondary: #764ba2;  /* Change secondary color */
-    --accent: #f56565;     /* Change accent color */
+    --primary: #667eea;    /* Primary color */
+    --secondary: #764ba2;  /* Secondary color */
+    --accent: #f56565;     /* Accent color */
 }
-Add New Skills
-bash
-# Add new skill item in HTML (in skills section):
+Add New Skill
+Add this HTML:
+
+html
 <div class="skill-item">
     <div class="skill-header">
         <span class="skill-name">New Skill</span>
@@ -175,94 +133,63 @@ bash
         <div class="skill-progress new-skill-progress"></div>
     </div>
 </div>
+Add this CSS:
 
-# Then add in CSS:
+css
 .new-skill-progress { width: 85%; }
-Testing Commands
+Testing
+Check Files
+bash
+ls -la
+ls -la Images/
 Validate HTML
 bash
-# Use W3C Validator
-curl -H "Content-Type: text/html; charset=utf-8" \
---data-binary @index.html \
-https://validator.w3.org/nu/?out=gnu
+curl -H "Content-Type: text/html; charset=utf-8" --data-binary @index.html https://validator.w3.org/nu/?out=gnu
 Validate CSS
 bash
-# Use W3C CSS Validator
-curl -H "Content-Type: text/css" \
---data-binary @styles.css \
-https://jigsaw.w3.org/css-validator/validator
-Test Responsive Design
-bash
-# Open Chrome DevTools for testing:
-# 1. Open index.html in Chrome
-# 2. Press F12 or Ctrl+Shift+I
-# 3. Click Toggle Device Toolbar (Ctrl+Shift+M)
-# 4. Test different device sizes
+curl -H "Content-Type: text/css" --data-binary @styles.css https://jigsaw.w3.org/css-validator/validator
 Troubleshooting
-Common Issues and Solutions
-Images Not Displaying
+Vercel Issues
 bash
-# Check image path and file name
-ls -la Images/
-# Ensure file is named exactly: Image.jpg
-# Check file permissions
-chmod 644 Images/Image.jpg
-CSS Not Loading
+vercel logs
+vercel --debug
+Images Not Loading
 bash
-# Verify CSS file path in HTML
-grep 'styles.css' index.html
-# Should show: <link rel="stylesheet" href="styles.css">
-
-# Check CSS file exists
-ls -la styles.css
-Links Not Working
+ls -la Images/Image.jpg
+CSS Not Applying
 bash
-# Test each link manually
-# Check for typos in URLs
-# Verify target="_blank" and rel attributes
-Performance Optimization
-Image Optimization
-bash
-# Install ImageMagick for optimization
-sudo apt-get install imagemagick  # Ubuntu/Debian
-brew install imagemagick         # macOS
-
-# Optimize profile image
-convert Images/Image.jpg -quality 85 -resize 500x500 Images/Image-optimized.jpg
-Minify CSS (Optional)
-bash
-# Install CSS minifier
-npm install -g css-minifier
-
-# Minify CSS file
-css-minifier -o styles.min.css styles.css
+grep "styles.css" index.html
 Maintenance
-Update Dependencies
+Update Site
 bash
-# Check for broken CDN links
-# Test Font Awesome and Google Fonts links
-# Update CDN URLs if needed
-Regular Testing
+# Make changes, then:
+vercel --prod
+Check Deployments
 bash
-# Test all contact links monthly
-# Verify social media profiles are active
-# Check responsive design on new devices
-Support
-For issues or questions:
+vercel list
+Remove Deployment
+bash
+vercel remove portfolio-website
+Quick Commands Summary
+bash
+# Create and deploy:
+mkdir portfolio-website && cd portfolio-website
+touch index.html styles.css README.md
+mkdir Images
+# Add image to Images/Image.jpg
+# Copy HTML/CSS code
+npm install -g vercel
+vercel login
+vercel
+Resources
+Vercel Docs: https://vercel.com/docs
 
-Check this README for solutions
+HTML Validator: https://validator.w3.org
 
-Verify file structure and naming
+CSS Validator: https://jigsaw.w3.org/css-validator
 
-Test on different browsers
-
-Clear browser cache if issues persist
-
-License
-This project is open source and available for personal and commercial use.
-
-Last Updated: January 2025
+Last Updated: December 2025
 Version: 1.0.0
-Deployment Platform: Vercel
+Deployment: Vercel
 Status: Production Ready
 
